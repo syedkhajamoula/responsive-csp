@@ -1,0 +1,80 @@
+
+<form action="">
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="heading text-center">
+        <h2>Contact
+          <span> Us </span>
+        </h2>
+        <p>The best way to predict the future is to create it.
+          <br>Have a question, suggestion, or just want to say hello? We'd love to hear from you!
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="title">
+            <h3>Contact detail</h3>
+            <p>It is very important for the customer to follow the coaching process, but I will give it this time</p>
+          </div>
+          <div class="content">
+
+            <div class="info">
+              <i class="fas fa-mobile-alt"></i>
+              <h4 class="d-inline-block">PHONE :
+                <br>
+                <span>91+8008379217 , 91+16305238247</span>
+              </h4>
+            </div>
+
+            <div class="info">
+              <i class="far fa-envelope"></i>
+              <h4 class="d-inline-block">EMAIL :
+                <br>
+                <span>staygold@realestate.com</span>
+              </h4>
+            </div>
+            <div class="info">
+              <i class="fas fa-map-marker-alt"></i>
+              <h4 class="d-inline-block">ADDRESS :<br>
+                <span>NEC College , NRT , Andhra Pradesh , India</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="sai" placeholder="Name" [(ngModel)]="UpdatedUser.Name">
+              </div>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" name="sai" placeholder="Email"  [(ngModel)]="UpdatedUser.Email">
+              </div>
+              <div class="col-sm-12">
+                <input type="text" class="form-control"  name="sai" placeholder="Subject"  [(ngModel)]="UpdatedUser.Subject">
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="5" id="comment"  name="sai" placeholder="Message"  [(ngModel)]="UpdatedUser.Message">
+
+              </textarea>
+            </div>
+            <button class="btn btn-block" type="submit"  (click)="Insert()">Send Now!</button>
+            <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+            <div class="alert alert-primary my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg1}}</div>
+
+            <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <img src="assets\logo.webp" height="10%" width="15%" style="margin-left: 42%;margin-bottom: 5%;margin-top: 5%;">
+</form>
+
+
+<router-outlet></router-outlet>
