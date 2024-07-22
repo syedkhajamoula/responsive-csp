@@ -1,0 +1,16 @@
+<div *ngIf="disp">
+  <div class="toolimg">
+    <mat-toolbar class="menubar" style="background-color:#F7F7F2">
+     <img style="height: 40px;width: 150px;" src="assets\logo.webp" alt="">
+    <div class="links">
+    <button class="tool"  routerLink="/home">Home</button>
+    <button class="tool"  routerLink="/rental">Rental</button>
+    <button class="tool"  routerLink="/sales">Sales</button>
+    <button class="tool" routerLink="/aboutus">about us</button>
+    <button class="tool" routerLink="/contactus">Contact us</button>
+    <button class="tool" routerLink="/">Logout</button>
+   </div>
+  </mat-toolbar>
+  </div>
+</div>
+<router-outlet ></router-outlet>
