@@ -1,0 +1,55 @@
+.toolimg{
+    padding-bottom: 5px;
+  }
+  mat-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  .links{
+    /* background-color:#F7F7F2; */
+  
+  }
+    .tool{
+      margin: 50px;
+      border: none;
+      font-size: large;
+      padding: 10px;
+      border-color: red;
+    }
+    
+    mat-toolbar button{
+      background-color:transparent;
+      color: rgb(18, 19, 19);
+      padding: 10px;
+      border-radius:5%;
+    }
+    mat-toolbar button:hover{
+      color: rgb(25, 26, 26);
+      background-color: pink;
+      font-style:italic;
+      font-weight: bold;
+      border-radius: 100%;
+    } 
+    
+  @media screen and (max-width: 480px) {
+    .menubar{
+      padding-top: .5rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+ .links{
+  background-color:#F7F7F2;
+ }
+    .links .tool{
+      padding: .3px;
+      margin: 0px;
+      scale: 0.6;
+      
+    }
+
+   
+  }
+  

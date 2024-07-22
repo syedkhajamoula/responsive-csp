@@ -1,0 +1,177 @@
+<body>
+
+  
+
+
+  
+<div class="database">
+  <div class="d-block mx-auto w-50">
+      <label for="RollNumber" style="color:aliceblue">Enter Category</label>
+      <input type="text" name="RollNumber" id="RollNumber" class="form-control" [(ngModel)]="Roll"
+          placeholder="Ex:Family">
+      <div class="d-flex my-2">
+          <input type="submit" value="Get all" class="btn btn-primary" (click)="Read('All')">
+          <input type="submit" [value]="'Get '+ Roll" class="btn btn-primary mx-1" (click)="Read(Roll)">
+      </div>
+      <p *ngIf="!(Results.length!=0 && GotResult)" class="text-danger"></p>
+  </div>
+  <table border="1" class="table w-50  mx-auto" style="border: color #115ccc;border-width: 5px;border-collapse:unset;" *ngIf="Results.length!=0 && GotResult">
+      <thead class="thead-dark">
+          <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Email</th>
+              <th scope="col">Category</th>
+              <th scope="col">Address</th>
+              <th scope="col">City</th>
+              <th scope="col">State</th>
+              <th scope="col">Mobile</th>
+              <th scope="col">Delete</th>
+              <th scope="col">Update</th>
+              
+             
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let Data of Results">
+              <th scope="row">{{Data[0]}}</th>
+              <td>{{Data[1]}}</td>
+              <td>{{Data[2]}}</td>
+              <td>{{Data[3]}}</td>
+              <td>{{Data[4]}}</td>
+              <td>{{Data[5]}}</td>
+              <td>{{Data[6]}}</td>
+              <td>{{Data[7]}}</td>
+              <td><button type="button" role="button" class="btn" style="background-color: thistle;" (click)="Delete(Data[0])"><span class="material-symbols-outlined">
+                delete
+                </span></button></td>
+                  <td><button style="color: rgb(27, 26, 26);background-color: rgb(129, 237, 129);" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Read1(Data[3])">
+                    <span class="material-symbols-outlined">
+                        edit_square
+                        </span></button></td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Updated Values</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" name="Name" id="Name" placeholder="Enter Name" class="form-control my-1" [(ngModel)]="UpdatedUser.Name">
+           <br> <input type="text" name="RollNumber" id="RollNumber" value="{Data[0]}" placeholder="Enter Gender" class="form-control my-1" [(ngModel)]="UpdatedUser.Gender">
+            <br><input type="text" name="RollNumber" id="RollNumber" placeholder="Enter Email" class="form-control my-1" [(ngModel)]="UpdatedUser.Email">
+            <br><input type="text" name="RollNumber" id="RollNumber" placeholder="Enter Category" class="form-control my-1" [(ngModel)]="UpdatedUser.Category">
+            <br> <input type="text" name="RollNumber" id="RollNumber" placeholder="Enter Address" class="form-control my-1" [(ngModel)]="UpdatedUser.Address">
+            <br>  <input type="text" name="RollNumber" id="RollNumber" placeholder="Enter City" class="form-control my-1" [(ngModel)]="UpdatedUser.City">
+            <br>  <input type="text" name="RollNumber" id="RollNumber" placeholder="Enter State" class="form-control my-1" [(ngModel)]="UpdatedUser.State">
+            <br> <input type="text" name="RollNumber" id="RollNumber" placeholder="Enter Mobile" class="form-control my-1" [(ngModel)]="UpdatedUser.Mobile">
+          </div>
+          <div class="modal-footer">
+            <button type="button" style="color: #f7f7f2;background-color:rgb(9, 229, 218);padding: 10px;" class="btn btn-primary"  data-bs-dismiss="modal" (click)="Update(Roll,UpdatedUser)">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="rent-cards" *ngFor="let Data of Results; let i = index">
+  <div class="card">
+    <div class="data"><h1>Category :</h1><span> {{Data[3]}}</span></div>
+    <div class="data"><h1>NAME : </h1><span> {{Data[0]}}</span></div>
+    <div class="data"><h1>Gender :</h1><span> {{Data[1]}}</span></div>
+    <div class="data"><h1>Email :</h1><span> {{Data[2]}}</span></div>
+    <div class="data"><h1>Address :</h1><span> {{Data[4]}}</span></div>
+    <div class="data"><h1>City : </h1><span> {{Data[5]}}</span></div>
+    <div class="data"><h1>State : </h1><span> {{Data[6]}}</span></div>
+    <div class="data"><h1>Mobile :</h1><span> {{Data[7]}}</span></div>
+  <div class="buttons">
+  <a href="#">Buy</a>
+  <a href="">Pay as Rent</a>
+  </div>
+<div class="icons">
+ 2 Bed rooms<span class="material-symbols-outlined"> bed</span>
+ 2 Garage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="material-symbols-outlined"> garage</span><br>
+ 2 kitchens &nbsp;&nbsp;&nbsp;<span class="material-symbols-outlined">skillet</span>
+ 3 Bath rooms<span class="material-symbols-outlined"> bathtub</span>
+</div>
+</div>
+<div class="house-img">
+  <img [src]="myPix[i % myPix.length]" />
+</div>
+</div>
+
+
+ <div class="heading1">
+  <h1>Some Popular Houses For Rent<span class="material-symbols-outlined">payments</span></h1>
+  </div>
+      <div style="background-color: #f7f7f2;">
+         <div class="container boxcontainer">
+              <div class="flow"> 
+                 <img src="assets\rent\h3.jpg">
+                 <h1>Family</h1>
+                 <p class="by">By<span class="name"> STAY GOLD</span></p>
+                 <p class="description">"Home is where love resides, memories are created,and laughter never ends."</p>
+                 <span><del class="oldprice">$3000</del></span>
+                 <span class="newprice">$1500</span>
+                 <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>9493918483</p>
+                 <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;"> </p>
+              </div>
+          <div class="flow"> 
+              <img src="assets\rent\h6.jpg" >
+              <h1>Bachelor</h1>
+              <p class="by">By<span class="name">STAY GOLD</span></p>
+              <p class="description">A house is made of walls and beams; a home is built with love and dreams.iam happy</p>
+              <span><del class="oldprice">$2500</del></span>
+              <span class="newprice">$2000</span>
+              <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>:9485769377</p>
+              <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;"> </p>
+          </div>
+          <div class="flow"> 
+              <img src="assets\rent\h2.jpg" >
+              <h1>Villa</h1>
+              <p class="by">By<span class="name">STAY GOLD</span></p>
+              <p class="description">The magic thing about home is that it feels good to leave, and it feels even better to come back.</p>
+              <span><del class="oldprice">$3455</del></span>
+              <span class="newprice">$2673</span>
+              <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>:9593746573</p>
+              <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;">  </p>
+          </div>
+          <div class="flow top"> 
+              <img src="assets\rent\h4.jpg" >
+              <h1>Farmhouse</h1>
+              <p class="by">By<span class="name"> STAY GOLD</span></p>
+              <p class="description">A house becomes a home when you can write 'I love you' on the furniture.</p>
+              <span><del class="oldprice">$3500</del></span>
+              <span class="newprice">$2999</span>
+              <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>:6486386647</p>
+              <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;">  </p>
+          </div>
+          <div class="flow top"> 
+              <img src="assets\rent\h3.jpg">
+              <h1>Villa</h1>
+              <p class="by">By<span class="name"> STAY GOLD</span></p>
+              <p class="description">"Home is where your heart is, and I've found my heart in this place."</p>
+              <span><del class="oldprice">$8996</del></span>
+              <span class="newprice">$7652</span>
+              <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>6875442569</p>
+              <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;">  </p>
+          </div>
+          <div class="flow top"> 
+              <img class="imga" src="assets\rent\h11.jpg">
+              <h1>Tiny</h1>
+              <p class="by">By<span class="name">STAY GOLD</span></p>
+              <p class="description">A home is like it what i was dreem in my mind iam with this website.</p>
+              <span><del class="oldprice">$2556</del></span>
+              <span class="newprice">$1398</span>
+              <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>&nbsp;:6395457669</p>
+              <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;"> </p>
+          </div>
+          <div class="clear">
+          </div>
+         </div>
+      </div>
+  </body>

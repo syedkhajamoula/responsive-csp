@@ -1,0 +1,39 @@
+
+<body>
+<div onclick="display">
+	<div class="main">  	
+		
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form action="login">
+					<label for="chk" aria-hidden="true">Sign up</label>
+
+					<input type="text" name="text" placeholder="User name" [(ngModel)]="User.password" required>
+					<input type="email" name="email" placeholder="Email" [(ngModel)]="User.email" required>
+					<div class="field">
+					<input [type]="showpassword ? 'text':'password'" name="pswd" placeholder="Password" [(ngModel)]="User.roll" required>
+					<span style="font-size: medium;color: red;" class="material-symbols-outlined eye" type="button" (click)="toggleshow()" *ngIf="showpassword">lock</span>
+                 	<span type="button" style="font-size: medium;color: red;" class="material-symbols-outlined eye" (click)="toggleshow()" *ngIf="!showpassword">lock_open</span>
+					</div>
+					<button  (click)="Insert()">Sign up</button>
+					
+					<div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+					<div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+
+			    </form>
+			</div>
+
+			<div class="login">
+				<form >
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" [(ngModel)]="Doctor.email" required>
+					<input type="password" name="password" placeholder="Password" [(ngModel)]="Doctor.password" required>
+					<button (click)="Read()">Login</button>
+				</form>
+			</div>
+	</div>
+	</div>
+</body>
+
+

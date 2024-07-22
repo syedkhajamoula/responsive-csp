@@ -1,0 +1,411 @@
+<head>
+  <style>
+    
+body{
+  
+  display: flex;
+  
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #0cc8cf, #bae61b);
+}
+.containers{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.containers .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.containers .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #05e487;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg,#54d29b, #d15294);
+ }
+ form .button input:hover{
+  background: linear-gradient(-135deg, #0dc4e0, #2de009);
+  }
+ @media(max-width: 584px){
+ .containers{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .containers .content .category{
+    flex-direction: column;
+  }
+}
+body{
+    background-size: 100% 100%;
+  }
+  
+  
+   @media only screen and (min-width:300px)
+    
+    {
+      body{
+          
+          flex-direction:column;
+      }
+    }
+   
+
+  .heading1{
+    padding: 30px;
+    background-color: #f7f7f2;
+}  
+
+.flow:hover{
+    opacity: 1;
+    filter: brightness(100%);
+    transform: scale(1.0);
+    box-shadow: 10px 20px 200px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.right:hover{
+    image-resolution:calc(39%2);
+
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.boxcontainer {
+  font-family: Arial, Tahoma;
+}
+
+.container {
+  padding: 20px;
+  border-top: 1px solid #2a2b32;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flow {
+  background-color: #ffffff;
+  float: left;
+  width: calc(92% / 3);
+  border: 1px solid #e8e8f2;
+  box-shadow: #2a2b32;
+  margin-left: 2%;
+  border-radius: 3%;
+  padding: 40px;
+  filter: brightness(90%);
+  transform: scale(0.9);
+  transition: 0.8s;
+  min-height: 650px;
+}
+
+.flow:hover {
+  opacity: 1;
+  filter: brightness(100%);
+  transform: scale(1.0);
+  box-shadow: 10px 20px 200px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.by {
+  font-size: 16px;
+}
+
+.name {
+  color: #6d6df5;
+  font-weight: bold;
+}
+
+.description {
+  color: #888888;
+  font-size: 18px;
+}
+
+.oldprice {
+  color: #9f9f9f;
+}
+
+.newprice {
+  color: #404040;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.ships {
+  background-color: lightgreen;
+  color: white;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.seconditems {
+  margin-top: 30px;
+}
+
+.top {
+  margin-top: 30px;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .flow {
+      width: 100%; /* Display one item per row */
+      margin-left: 0;
+      margin-bottom: 20px; /* Add some spacing between items */
+      padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+  </style>
+</head>
+
+   <body>
+  <div class="containers">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"><b>HostelName</b></span>
+            <input type="text" placeholder="Enter your house names" name="Nmae" value="Name" [(ngModel)]="User.Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Gender</b></span>
+            <input type="text" placeholder="Enter your Gender" value="Gender"name="Nmae" [(ngModel)]="User.Gender"  required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Email</b></span>
+            <input type="text" placeholder="Enter your Email" name="Nmae" [(ngModel)]="User.Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Category</b></span>
+            <input type="text" placeholder="Enter Category"name="Nmae" [(ngModel)]="User.Category"  required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Address</b></span>
+            <input type="text" placeholder="Enter your Address"name="Nmae" [(ngModel)]="User.Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>City</b></span>
+            <input type="text" placeholder="Enter City" name="Nmae" [(ngModel)]="User.City"  required>
+          </div>
+       
+        <div class="input-box">
+            <span class="details"><b>State</b></span>
+            <input type="text" placeholder="Enter State" name="Nmae" [(ngModel)]="User.State"  required>
+        </div>
+        
+        <div class="input-box">
+            <span class="details"><b>Mobile</b></span>
+            <input type="text" placeholder="Enter your Contact" name="Name" [(ngModel)]="User.Mobile"  required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" (click)="Insert()" value="Register">
+        </div>
+      </form>
+      <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+                    <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+    </div>
+  </div>
+</body>
+
+<div class="shopcard">
+  <div class="heading1">
+    <h1>Some Popular Houses For Rent<span class="material-symbols-outlined">payments</span></h1>
+    </div>
+        <div style="background-color: #f7f7f2;">
+           <div class="container boxcontainer">
+                <div class="flow"> 
+                   <img src="assets\rent\h3.jpg">
+                   <h1>Family</h1>
+                   <p class="by">By<span class="name"> STAY GOLD</span></p>
+                   <p class="description">"Home is where love resides, memories are created,and laughter never ends."</p>
+                   <span><del class="oldprice">$3000</del></span>
+                   <span class="newprice">$1500</span>
+                   <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>9493918483</p>
+                   <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;"> </p>
+                </div>
+            <div class="flow"> 
+                <img src="assets\rent\h6.jpg" >
+                <h1>Bachelor</h1>
+                <p class="by">By<span class="name">STAY GOLD</span></p>
+                <p class="description">A house is made of walls and beams; a home is built with love and dreams.iam happy</p>
+                <span><del class="oldprice">$2500</del></span>
+                <span class="newprice">$2000</span>
+                <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>:9485769377</p>
+                <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;"> </p>
+            </div>
+            <div class="flow"> 
+                <img src="assets\rent\h2.jpg" >
+                <h1>Villa</h1>
+                <p class="by">By<span class="name">STAY GOLD</span></p>
+                <p class="description">The magic thing about home is that it feels good to leave, and it feels even better to come back.</p>
+                <span><del class="oldprice">$3455</del></span>
+                <span class="newprice">$2673</span>
+                <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>:9593746573</p>
+                <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;">  </p>
+            </div>
+            <div class="flow top"> 
+                <img src="assets\rent\h4.jpg" >
+                <h1>Farmhouse</h1>
+                <p class="by">By<span class="name"> STAY GOLD</span></p>
+                <p class="description">A house becomes a home when you can write 'I love you' on the furniture.</p>
+                <span><del class="oldprice">$3500</del></span>
+                <span class="newprice">$2999</span>
+                <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>:6486386647</p>
+                <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;">  </p>
+            </div>
+            <div class="flow top"> 
+                <img src="assets\rent\h3.jpg">
+                <h1>Villa</h1>
+                <p class="by">By<span class="name"> STAY GOLD</span></p>
+                <p class="description">"Home is where your heart is, and I've found my heart in this place."</p>
+                <span><del class="oldprice">$8996</del></span>
+                <span class="newprice">$7652</span>
+                <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>6875442569</p>
+                <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;">  </p>
+            </div>
+            <div class="flow top"> 
+                <img class="imga" src="assets\rent\h11.jpg">
+                <h1>Tiny</h1>
+                <p class="by">By<span class="name">STAY GOLD</span></p>
+                <p class="description">A home is like it what i was dreem in my mind iam with this website.</p>
+                <span><del class="oldprice">$2556</del></span>
+                <span class="newprice">$1398</span>
+                <p class="ships"><span class="material-symbols-outlined">phone_in_talk</span>&nbsp;:6395457669</p>
+                <p class="right"><img src="assets\logo.webp" height="40px" width="80px" alt="" style="float: right;"> </p>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+        </div>
+</div> 
+
+
+
+
+
+    

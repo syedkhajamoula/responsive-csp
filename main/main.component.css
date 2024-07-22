@@ -1,0 +1,51 @@
+body{
+  background-size: 100% 100%;
+}
+video{
+  height: 110%;
+  width: 100%;
+
+}
+
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+ 
+
+  .toolimg{
+ 
+    overflow: hidden;
+  }
+
+
+  
+  .tool{
+    margin: 50px;
+    border: none;
+    font-size: large;
+    padding: 10px;
+    border-color: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
+button{
+    background-color:transparent;
+    color: rgb(248, 252, 252);
+    padding: 10px;
+    border-radius:35%;
+   
+   
+}
+ button:hover{
+    color: rgb(25, 26, 26);
+    background-color: rgb(248, 246, 246);
+    font-style:italic;
+    font-weight: bold;
+    border-radius: 100%;
+
+  }
+  
